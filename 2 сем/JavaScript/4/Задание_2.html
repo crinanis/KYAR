@@ -1,0 +1,50 @@
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+		function Work(name, surname, wage_march, wage_april, wage_may, average){
+            this.name = name;
+            this.surname = surname;
+            this.wage_march = wage_march;
+            this.wage_april = wage_april;
+            this.wage_may = wage_may;
+
+            this.info = function info(){
+                alert(this.name + ' ' + this.surname);
+            }
+            this.calc = function calc(){
+                this.average = Math.round((this.wage_march + this.wage_april + this.wage_may)/3);
+            }
+        }
+        w1= new Work('Татьяна', 'Буланова', 1700, 1500, 1650, 0);
+        w2= new Work('Михаил', 'Круг', 1200, 1000, 1200, 0);
+        w3= new Work('Никита', 'Михалков', 1325, 1220, 1110, 0);
+        
+        w1.calc();
+        w2.calc();
+        w3.calc();
+
+        Work.prototype.experience = this.experience;
+        w1.experience = 'Есть';
+        w2.experience = 'Нет';
+        w3.experience = 'Нет';
+
+        function writeInf(){
+            document.write(w1.name + ' ' + w1.surname + '</br>');
+            document.write('Средняя зарплата за три месяца составила: ' + w1.average + '</br>');
+            document.write('Предыдущий опыт работы: ' + w1.experience + '</br>');
+
+            document.write(w2.name + ' ' + w2.surname + '</br>');
+            document.write('Средняя зарплата за три месяца составила: ' + w2.average + '</br>');
+            document.write('Предыдущий опыт работы: ' + w2.experience + '</br>');
+
+            document.write(w3.name + ' ' + w3.surname + '</br>');
+            document.write('Средняя зарплата за три месяца составила: ' + w3.average + '</br>');
+            document.write('Предыдущий опыт работы: ' + w3.experience + '</br>');
+        }
+	</script>
+        <div><input type="button" value="first" onclick="w1.info()"></div>
+        <div><input type="button" value="second" onclick="writeInf()"></div>
+</body>
+</html>

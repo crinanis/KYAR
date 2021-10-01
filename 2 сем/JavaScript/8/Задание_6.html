@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#pp{
+			color:purple;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<p id="pp">Double-click on me!</p>
+	<script type="text/javascript">
+		var t = document.getElementById("pp");
+		t.ondblclick = function(){
+			t.style.border='dotted 5px #7B68EE';
+		}
+	</script>
+</body>
+</html>

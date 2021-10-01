@@ -1,0 +1,36 @@
+<html>
+<head>
+	<style type="text/css">
+		table,td {
+    border: 1px solid #745582;
+    padding: 10px 10px;
+    margin: 20px;
+    text-align: center;
+    color: #745582;
+    border-collapse: collapse;
+    }
+    td {
+    border: 1px solid #745582;
+    background-color: #e4cccb;
+    }
+	</style>
+</head>
+<body>
+<table>
+	<script type="text/javascript">
+        document.write('<tr><td>Число</td><td>Метод</td><td>Результат</td><td>Описание метода</td></tr>');
+		var a = Number(prompt('Введите целое число ', '5'));
+		var b = Number(prompt('Введите дробное число ', '127.54'));
+        var a_to_exp=a.toExponential(5);
+        var a_to_fix=a.toFixed(3);
+        var a_to_pre=a.toPrecision(8);
+        var a_to_str=a.toString(2);
+        var b_to_exp=b.toExponential(6);
+        var b_to_fix=b.toFixed(10);
+        var b_to_pre=b.toPrecision(9);
+        var b_to_str=b.toString(16);
+        document.write('<tr><td>'+a+'</td><td>toExponential(5)</td><td>'+a_to_exp+'</td><td>Представление числа в экспоненциальной форме с 5 знаками после точки</td></tr><tr><td>'+a+'</td><td>toFixed(3)</td><td>'+a_to_fix+'</td><td >Представление числа в форме с фиксированным количеством цифр (3) после точки</td></tr><tr><td >'+a+'</td><td>toPrecision(8)</td><td>'+a_to_pre+'</td><td >Представление числа с заданным общим количеством значащих цифр (8)</td></tr><tr><td >'+a+'</td><td>toString(2)</td><td>'+a_to_str+'</td><td>Cтроковое представление числа в системе счисления с основанием 2</td></tr><tr><td >'+b+'</td><td>toExponential(6)</td><td>'+b_to_exp+'</td><td>Представление числа в экспоненциальной форме с 6 знаками после точки</td></tr><tr><td >'+b+'</td><td>toFixed(10)</td><td>'+b_to_fix+'</td><td >Представление числа в форме с фиксированным количеством цифр (10) после точки</td></tr><tr><td >'+b+'</td><td>toPrecision(9)</td><td>'+b_to_pre+'</td><td>Представление числа с заданным общим количеством значащих цифр (9)</td></tr><tr><td>'+b+'</td><td>toString(16)</td><td>'+b_to_str+'</td><td>Cтроковое представление числа в системе счисления с основанием 16</td></tr>');
+	</script>
+</table>
+</body>
+</html>

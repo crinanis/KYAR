@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Перемещаем картинку по кривой</title>
+<style>
+    #pic {
+    	position: relative;
+    	width: 210px;
+    }
+</style>
+</head>
+<body>
+	<img id="pic" src="kot.jpg">
+    <script>
+    	 let piy = document.getElementById("pic");
+    	piy.onclick = function (){
+        let x = 0, y = 0;
+        let times = setInterval(move, 10);
+        function move() {
+            x++;
+            y = 80 * Math.sin(x * 0.03);
+            piy.style.top = y + 100 + "px";
+            piy.style.left = x + "px";
+            if (x > 1400) clearInterval(times);
+    	}
+    }
+  </script>
+
+</body>
+</html>

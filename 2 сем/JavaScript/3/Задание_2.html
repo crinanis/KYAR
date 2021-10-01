@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = new Array('pow', 'pop', 'push', 'shift', 'round', 'floor', 'slice', 'sort');
+		document.write('Исходный массив: ');
+		for (var i=0;i<8;i++){
+			document.write(arr[i]+ ' ');
+		}
+		document.write('</br>');
+		
+		var arrMath = new Array();
+		var arrArr = new Array();
+
+		arrMath[0] = arr.shift();
+
+		for(var i = 0; i < 3; i++){
+			arrArr[i] = arr.shift();
+		}
+		for(var i = 1; i < 3; i++){
+			arrMath[i] = arr.shift();
+		}
+		for(var i = 3; i < 5; i++){
+			arrArr[i] = arr.shift();
+		}
+
+        arrArr.unshift('unshift');
+        arrMath.push('min');
+
+
+		document.write('Массив Array: ');
+		for(var i = 0; i < 6; i++)
+		{
+			document.write(arrArr[i] + ' ');
+		}
+		document.write('<br>');
+		document.write('Массив Math: ');
+		for(var i = 0; i < 4; i++)
+		{
+			document.write(arrMath[i] + ' ');
+		}
+	</script>
+</body>
+</html>

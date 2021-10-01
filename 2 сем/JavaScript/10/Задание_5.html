@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    #canvas_plot{
+      background:#ead9ce;
+      border:2px solid black;
+    }
+    input, select {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+  </style>
+     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+     <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+  <canvas id="canvas_plot" width="700" height="500"></canvas>
+
+  <form>
+        <input type = "radio" id = "k1" name="func" checked/> y = x<sup>2</sup>
+        <input type = "radio" id = "k2" name="func" /> y = x<sup>3</sup>
+        <input type = "radio" id = "k3" name="func"/> y = sin x
+        <input type = "radio" id = "k4" name="func" /> y = cos x
+
+    <select name="colour">
+      <option value = "violet">Violet</option>
+      <option value = "red">Red</option>
+      <option value = "blue">Blue</option>
+      <option value = "yellow">Yellow</option>
+      <option value = "black">Black</option>
+    </select>
+
+    <input type="button" value="Напечатать" onclick="draw()">
+    <input type="button" value="Очистить" onclick="clearing()">
+    </form>
+
+  <script type="text/javascript">
+    const canvasPlot = document.getElementById("canvas_plot");
+    const ctx = canvasPlot.getContext('2d');
+
+    const canvasW = canvasPlot.clientWidth;
+    const canvasH = canvasPlot.clientHeight;
+
+    const scaleX = 50;
+    const scaleY = 50;
+    const xAxis = canvasW/2;
+    const yAxis = canvasH/2;
+
+    ctx.beginPath();
+    ctx.strokeStyle='black';
+    ctx.moveTo(xAxis,0);
+    ctx.lineTo(xAxis, canvasH);
+
+    ctx.moveTo(0,yAxis);
+    ctx.lineTo(canvasW, yAxis);
+
+    ctx.stroke();
+    ctx.closePath();
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+          $("#k1").click(function () {choice = 1});
+          $("#k2").click(function () {choice = 2});
+          $("#k3").click(function () {choice = 3});
+          $("#k4").click(function () {choice = 4});
+
+    function draw(){
+
+        switch(choice){
+          case 1: drawx2(); break;
+          case 2: drawx3(); break;
+          case 3: drawSin(); break;
+          case 4: drawCos(); break;
+        }
+
+      }
+
+    function drawx2(){
+      var curr_colour = document.forms[0].colour.value;
+      ctx.fillStyle = curr_colour;
+      for(let i=0;i<=canvasW;i++){
+      const x=(i - xAxis)/ scaleX;
+      const y = Math.pow(x,2);
+      ctx.fillRect(x*scaleX + xAxis, yAxis - scaleY*y,2,2);
+    }
+    }
+
+
+      function drawx3(){
+        var curr_colour = document.forms[0].colour.value;
+         ctx.fillStyle = curr_colour;
+         for(let i=0;i<=canvasW;i++){
+        const x=(i - xAxis)/ scaleX;
+        const y = Math.pow(x,3);
+        ctx.fillRect(x*scaleX + xAxis, yAxis - scaleY*y,2,2);
+    }
+    }
+
+
+    
+    function drawSin(){
+        var curr_colour = document.forms[0].colour.value;
+        ctx.fillStyle = curr_colour;
+        for(let i=0;i<=canvasW;i++){
+        const x=(i - xAxis)/ scaleX;
+        const y = Math.sin(x);
+        ctx.fillRect(x*scaleX + xAxis, yAxis - scaleY*y,2,2);
+    }
+    }
+
+      function drawCos(){
+        var curr_colour = document.forms[0].colour.value;
+        ctx.fillStyle = curr_colour;
+        for(let i=0;i<=canvasW;i++){
+        const x=(i - xAxis)/ scaleX;
+        const y = Math.cos(x);
+        ctx.fillRect(x*scaleX + xAxis, yAxis - scaleY*y,2,2);
+    }
+    }
+
+
+      function clearing(){
+      ctx.clearRect(0, 0, 700,500);
+      
+    const xAxis = canvasW/2;
+    const yAxis = canvasH/2;
+
+    ctx.beginPath();
+    ctx.strokeStyle='black';
+    ctx.moveTo(xAxis,0);
+    ctx.lineTo(xAxis, canvasH);
+
+    ctx.moveTo(0,yAxis);
+    ctx.lineTo(canvasW, yAxis);
+
+    ctx.stroke();
+    ctx.closePath();
+      }
+  </script>
+</body>
+</html>

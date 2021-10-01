@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+    </title>
+
+    <style type="text/css">
+        textarea {
+            font-weight: bold;
+        }
+        body {
+            font-weight: lighter;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form onsubmit = "alert('submit!')">
+        <textarea name = "text" cols = "15" rows = "3">Факультет Информационных технологий</textarea><br/><br/>
+
+        <input type = "text" placeholder = "Имя" /><br/>
+        <input type = "text" placeholder = "Фамилия" /><br/>
+
+        <p>
+            Специальность
+            <select name = "spec">
+            <option value = "ИСИТ">ИСиТ</option>
+            <option value = "ПОИТ">ПОИТ</option>
+            <option value = "МОБИЛЬНИКИ">ПОИБМС</option>
+            <option value = "ДЭиВИ">ДЭиВИ</option>
+            </select>
+        </p>
+
+        <p>Курс</p>
+        <input type = "radio" name = "kurs" value = "1" checked/> 1
+        <input type ="radio" name = "kurs" value = "2"/> 2
+        <input type = "radio" name = "kurs" value = "3"/> 3
+        <input type = "radio" name = "kurs" value = "4"/> 4
+
+        <p>Предметы</p>
+        <input type = "checkbox" name = "subj" value = "ОИТ"/> ОИТ
+        <input type = "checkbox" name = "subj" value = "ОАП"/> ОАП
+        <input type = "checkbox" name = "subj" value = "История"/> История
+        <input type = "checkbox" name = "subj" value = "Физика"/> Физика
+        <input type = "checkbox" name = "subj" value = "Математика"/> Математика
+        <br/><br/>
+
+        <input type = "submit" value = "sumbit"/>
+        <input type = "reset" value = "reset"/>
+        <br/><br/>
+
+        <input type = "button" value = "Напечатать" onclick = "print()"/>
+        <input type = "button" value = "Задание 4" onclick = "listing()"/>
+        </form>
+
+    <script type="text/javascript">
+        function print() {
+            var FirstName = document.forms[0].elements[1].value;
+            var LastName = document.forms[0].elements[2].value;
+            var faculty = document.forms[0].text.value;
+            var spec = document.forms[0].spec.value;
+            var course = document.forms[0].kurs.value;
+            var subjects = document.getElementsByName("subj");
+            var n = subjects.length;
+            var arr = new Array;
+            for (var i = 0; i < n; i++) {
+                if (subjects[i].checked) arr[i] = subjects[i].value;
+                else arr[i] = 0;
+            }
+            var a = window.open();
+            a.document.write("<p align='left'>" + faculty + "</p>");
+            a.document.write("<p> Студент " + LastName + " " + FirstName + " специальность " + spec + " курс " + course + " должен сдавать следующи предметы: </p>");
+            a.document.write("<div class='block1'><ul>");
+            for (var i = 0; i < n; i++)
+                if (arr[i] != 0)
+                    a.document.write("<li>" + arr[i] + "</li>");
+            a.document.write("</ul><div>");
+            a.document.write("<input type='button' value='close' onclick='window.close()'/>");
+        }
+        function listing() {
+            var x = window.open();
+            var subjects = document.getElementsByName("subj");
+            var n = subjects.length;
+            var arr = new Array;
+            for (var i = 0; i < n; i++) {
+                if (subjects[i].checked)
+                    arr[i] = subjects[i].value;
+                else arr[i] = 0;
+            }
+            x.document.write("<form><select>");
+            for (var i = 0; i < n; i++)
+                if (arr[i] != 0)
+                    x.document.write("<option>" + arr[i] + "</option>");
+            x.document.write("</ul></form>");
+        }
+    </script>
+
+</body>

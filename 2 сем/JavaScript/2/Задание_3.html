@@ -1,0 +1,46 @@
+<html>
+<head>
+	<style type="text/css">
+		table,td {
+    border: 1px solid #745582;
+    padding: 10px 10px;
+    margin: 20px;
+    text-align: center;
+    color: #745582;
+    border-collapse: collapse;
+    }
+    td {
+    border: 1px solid #745582;
+    background-color: #e4cccb;
+    }
+	</style>
+</head>
+<body>
+<table>
+	<script type="text/javascript">
+        document.write('<tr><td>Радиус</td><td>Площадь круга</td><td >Длина окружности</td></tr>');
+		var a = Number(prompt('Введите начальный радиус окружности ', '0'));
+		var b = Number(prompt('Введите конечный радиус окружности ', '0'));
+        var increment = 0.3;
+        var k=0;
+        var number = (b-a)/increment+2;
+        var check = false;
+        do {
+            document.write('<td> ' + a + ' </td>');
+            document.write('<td> ' + Math.PI*a*a + ' </td>');
+            document.write('<td>' + 2*Math.PI*a + '</td>');
+            document.write('<tr>');
+            a+=increment;
+            k++;
+            if (check){
+                break;
+            }
+            if(a>b){
+                check=true;
+                a=b;
+            }
+        } while(k<number)
+	</script>
+</table>
+</body>
+</html>

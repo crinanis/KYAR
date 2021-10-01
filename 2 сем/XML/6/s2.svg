@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+    
+    <rect x="5" y="5" width="620" height="130"  fill="#c997c0" transform="rotate(-40 250 263)" fill-opacity="0.5 "/>
+
+    <circle r="65" cx="190" cy="70" stroke="6" fill="#6a3a4f"/>  
+
+    <line x1="20" y1="10" x2="200" y2="226" stroke="#990726" stroke-width="9"/>
+
+
+    <defs>
+        <linearGradient id = "MyGradient">
+            <stop offset = "20%" stop-color = "#923367"/>
+            <stop offset = "80%" stop-color = "#dab6c2"/>
+        </linearGradient>
+    </defs>
+
+    <rect x = "150" y = "35" width = "80" height="80" fill = "url(#MyGradient)"/>
+ </svg>

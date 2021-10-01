@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LINKS</title>
+	<style type="text/css">
+		a:hover{
+			color: red;
+		}
+		a{
+			text-decoration: none;
+			padding: 10px;
+		}
+		table{
+			border-collapse: collapse;
+			width: 900px;
+		}
+		td{
+			border-top:1px solid black;
+			border-bottom: 1px solid black;
+			border-right: 1px solid red;
+			border-left:1px solid red;
+			padding: 3px;
+			text-align: center;
+		}
+		div{
+			padding: 20px;
+		}
+
+		span a::after{
+			content: ' | ';
+			color: red;
+			margin: 0;
+			padding: 0;
+			float: right;
+		}
+		.bef::before{
+			content: ' | ';
+			color: red;
+			margin: 0;
+			padding: 0;
+			float:left;
+		}
+
+		span{
+			border-top:1px solid black;
+			border-bottom:1px solid black;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<table>
+		<tr>
+			<td><a href="https://diskstation.belstu.by:5001/">Первая ссылка</a></td>
+			<td><a href="https://vk.com">Вторая ссылка</a></td>
+			<td><a href="https://www.twitch.tv/">Третья ссылка</a></td>
+			<td><a href="https://www.pinterest.com/">Четвертая ссылка</a></td>
+			<td><a href="https://open.spotify.com/">Пятая ссылка</a></td>
+		</tr>
+	</table>
+</div>
+    <div>
+    	<span><a class="bef" href="https://diskstation.belstu.by:5001/">Первая ссылка </a></span>
+    	<span><a href="https://vk.com">Вторая ссылка </a></span>
+    	<span><a href="https://www.twitch.tv/">Третья ссылка </a></span>
+    	<span><a href="https://www.pinterest.com/">Четвёртая ссылка </a></span>
+    	<span><a href="https://open.spotify.com/">Пятая ссылка </a></span>
+    </div>
+</body>
+</html>

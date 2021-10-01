@@ -1,0 +1,84 @@
+.r1,
+.r2,
+.r3,
+.r4,
+.r5,
+.r6,
+.r7,
+.r8,
+.r9,
+.r10 {
+    display: flex;
+}
+
+.r1 div,
+.r10 div {
+    height: 20px!important;
+    width: 60px;
+    background: green!important;
+    border: solid black 1px;
+}
+.r2 div:first-child,
+.r3 div:first-child,
+.r4 div:first-child,
+.r5 div:first-child,
+.r6 div:first-child,
+.r7 div:first-child,
+.r8 div:first-child,
+.r9 div:first-child {
+    background-color: green!important;
+    height: 60px;
+    width: 20px!important;
+    border: solid black 1px;
+}
+.r2 div:last-child,
+.r3 div:last-child,
+.r4 div:last-child,
+.r5 div:last-child,
+.r6 div:last-child,
+.r7 div:last-child,
+.r8 div:last-child,
+.r9 div:last-child {
+    background-color: green!important;
+    height: 60px;
+    width: 20px!important;
+    border: solid black 1px;
+}
+
+
+.r1 div:first-child,
+.r10 div:first-child {
+    height: 20px!important;
+    width: 20px!important;
+    background-color: green!important;
+}
+.r1 div:last-child,
+.r10 div:last-child {
+    height: 20px!important;
+    width: 20px!important;
+    background-color: green!important;
+}
+div:nth-child(odd) div:nth-child(odd){
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: solid black 1px;
+}
+div:nth-child(even) div:nth-child(even){
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: solid black 1px;
+}
+div:nth-child(odd) div:nth-child(even){
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border: solid black 1px;
+}
+div:nth-child(even) div:nth-child(odd){
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border: solid black 1px;
+}

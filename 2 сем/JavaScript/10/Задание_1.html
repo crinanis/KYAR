@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <style type="text/css">
+          #kr1, #A, #up{
+               width: 300px;
+          }
+          #flexing{
+               float:left;
+               margin: 50px;
+          }
+     </style>
+	<title>JQUERY</title>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+     
+     <script type="text/javascript">
+     	 $(document).ready(function(){
+     	 	$('#wow').mouseover(function(){$('#wow').css('color', 'red')})
+     	 	$('#wow').mouseout(function(){$('#wow').css('color', 'black')})
+
+               $('#ssize').click(function(){$('#ssize').css('font-size', '10px')})
+               $('#ssize').dblclick(function(){$('#ssize').css('font-size', '30px')})
+
+               $('#kr1').dblclick(function(){$('#kr1').prop('src', 'kiskis.jpg')})
+               $('#kr1').click(function(){$('#kr1').prop('src', 'kis.jpg')})
+
+               $("#B").click(function(){
+               var c="kis.jpg";
+               var t = "A";
+               $("#A").append("<img id="+ t +" src= " + c + " >");
+               $('#B').empty();
+               })
+
+               $('#up').mouseover(function(){$('#up').css('width', '100px')})
+               $('#up').mouseout(function(){$('#up').css('width', '400px')})
+
+               $("#bord").dblclick(function(){$("#bord").css('border-style','dotted').css('border-color', 'purple');})
+           })
+     </script>
+</head>
+<body>
+	<div id="flexing"><h1 id="wow">Magic is in the air!</h1></br></div>
+     <div id="flexing"><div id="ssize">Текст для изменения</div></br></br></div>
+     <div id="flexing"><img id="kr1" src="kis.jpg"> </br> </br></div>
+     <div id="flexing"><img id="up" src="up.jpg"></div>
+     <div id="flexing"><p id="A"><p id="B">Кликни, чтобы появилась картинка</p></p></br></div>
+     <div id="flexing"><p id="bord">Нажми, чтобы обвести меня в рамку!</p></div>
+
+</body>
+</html>

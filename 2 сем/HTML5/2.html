@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>My site</h1> 
+	</header>
+	<nav>
+		<img src="tik.jpg" width="210" height="210" alt="me">
+		<figcaption>Моя фотография </figcaption>
+	</nav>
+
+	<form action="#" autocomplete="off" name="form_1" class="form1">
+		<fieldset>
+			<legend>Информация: </legend> 
+			<div>
+				<p>Имя: </label><input type="text" required placeholder="Имя"></p>				
+				<p>Фамилия: </label><input type="text" required placeholder="Фамилия"></p>
+				<p>E-mail: </label><input type="email" required  placeholder="email@example.com"> </p>
+				<p>Введите номер телефона:</label><input type="tel" required placeholder="+375(xx)xxx-xx-xx"></p>
+			</div>
+			<div>
+				<p>Выберете цвет: </label><input type="color"></p>
+				<p>Выберете дату: </label><input type="date"></p>
+				<p>Выберете время:</label><input type="time"></p>
+				<p>Перетащите ползунок:</label><input type="range"  min="0" max="1000"></p>
+			</div>
+			<div>
+				<p>Определите размер (от 0 до 10):</label><input type="number" step="1" min="0" max="10"></p>
+				<p>Поиск:</label><input type="seacrh" ></p>
+				<p>Яндекс или гугл?</label><input type="url"></p>
+				
+			</div>
+		</fieldset>
+		<div>
+			<p><input type="submit" value="Submit"  onclick="fun()"></p>
+			<p><input type="reset" value="Reset" ></p>
+		</div>
+	</form>
+
+	<footer>
+		<p>Буданова Ксения Андреевна</p>
+	</footer>
+
+	<script>
+		function fun() {
+			document.write("Имя: " + document.forms[0].elements[1].value + "</br>" + "Фамилия: " + document.forms[0].elements[2].value + "</br>" + "E-mail: " + document.forms[0].elements[3].value + "</br>" + "Номер телефона: " + document.forms[0].elements[4].value + "</br>" + "Цвет: " + document.forms[0].elements[5].value + "</br>" + "Дата: " + document.forms[0].elements[6].value + "</br>" + "Время: " + document.forms[0].elements[7].value + "</br>" + "Размах: " + document.forms[0].elements[8].value + "</br>" + "Размер: " + document.forms[0].elements[9].value + "</br>" + "Поиск: " + document.forms[0].elements[10].value + "</br>" + "Поисковая система: " + document.forms[0].elements[11].value + "</br>" );
+		}
+
+	</script>
+</body>
+
+</html>
+	

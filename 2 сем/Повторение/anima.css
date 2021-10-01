@@ -1,0 +1,59 @@
+@keyframes spining
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes first {
+    100% {
+        transform: skew(20deg);
+    }
+}
+ 
+@keyframes second {
+    100% {
+        background-color: #8c7b73;
+        height: 50px;
+        width: 50px;
+    }
+}
+#ani:hover .first {
+    animation: first  2s linear infinite;
+}
+ 
+#ani:hover .second {
+    animation: second 0.3s ease infinite ;
+}
+ 
+ 
+#ani {
+    display: flex;
+    padding-left: 400px;
+    padding-top: 100px;
+    
+}
+.square
+{
+    width: 80px;
+    height: 80px;
+    margin: 50px auto;
+    background-color: #d28e5f;
+    animation: spining 1s linear infinite;
+}
+ 
+.first
+{
+    width: 300px;
+    height: 400px;
+    margin: 50px;
+    background-color: #d2c1b5;
+}
+ 
+.second
+{
+  width: 300px;
+    height: 400px;
+    margin: 50px;
+    background-color: #614b3e;
+}

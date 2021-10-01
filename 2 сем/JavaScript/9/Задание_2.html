@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="UTF-8">
+<title>Перемещаем картинку по горизонтали</title>
+<head>
+<style>
+	#mypicture {
+        position: relative;
+        width: 210px;
+    }
+</style>
+</head>
+<body>
+    <img id="mypicture" src="kot.jpg">
+    <script style type="text/javascript">
+    	mypicture.onclick=function() {
+		    let start = Date.now();
+		    let timer = setInterval(func,20);
+		    function func(){
+		    	let timePassed = Date.now() - start;
+			    mypicture.style.left = timePassed/1.5 + "px";
+			    if(timePassed > 2100) clearInterval(timer);
+		    }
+		}
+</script>
+</body>
+</html>

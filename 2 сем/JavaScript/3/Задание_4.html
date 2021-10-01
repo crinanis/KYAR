@@ -1,0 +1,31 @@
+<html>
+<head>
+	<style type="text/css"> 
+	    table,td {
+        border: 1px solid #614b3e;
+        padding: 10px 10px;
+        margin: 20px;
+        text-align: center;
+        color: #614b3e;
+        border-collapse: collapse;
+        }
+        td {
+        border: 1px solid #614b3e;
+        background-color: #d2c1b5;
+        } 
+	</style>
+</head>
+<body>
+<table>
+	<script type="text/javascript">
+		let x = new Date();
+        document.write('<tr><td>Год</td><td>' + x.getFullYear() + '</td></tr>');
+        document.write('<tr><td>Месяц</td><td>' + (x.getMonth() + 1) + '</td></tr>');
+        document.write('<tr><td>День</td><td>' + x.getDate() + '</td></tr>');
+        document.write('<tr><td>Час</td><td>' + x.getHours() + '</td></tr>');
+        document.write('<tr><td>Минуты</td><td>' + x.getMinutes() + '</td></tr>');
+        document.write('<tr><td>Секунды</td><td>' + x.getSeconds() + '</td></tr>');
+	</script>
+</table>
+</body>
+</html>

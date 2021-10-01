@@ -1,0 +1,39 @@
+university {
+	display: block;
+	text-align: center;
+	margin: 10px 600px;
+	border: double #8C0088 5px;
+	font-size:15pt
+}
+
+name {
+	display: block;
+	font-style:italic;
+	padding: 5px 20px;
+	text-align:center;
+}
+
+passing_grade {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	border-top: double;
+	border-color: #8C0088;
+	padding: 5px 20px;
+}
+
+plan {
+	display: block;
+	text-align: center;
+	border-top: double;
+	border-color: #8C0088;
+	padding: 5px 20px;
+}
+
+city {
+	display: block;
+	text-align: center;
+	border-top: double;
+	border-color: #8C0088;
+	padding: 5px 20px;
+}

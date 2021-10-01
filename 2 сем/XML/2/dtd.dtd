@@ -1,0 +1,7 @@
+<!DOCTYPE poit [
+<!ELEMENT university (name,passing_grade,plan,city)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT passing_grade (#PCDATA)>
+<!ELEMENT plan (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+]>

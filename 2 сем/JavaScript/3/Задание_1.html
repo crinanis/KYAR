@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+		var massiv = new Array();
+		massiv[0]= 6*Math.pow(Math.PI,2) + 3*Math.exp(2);
+		massiv[1]= 2*Math.cos(4) + Math.cos(12) + 8*Math.pow(Math.exp(3),3);
+		massiv[2]= 3*Math.sin(9) + Math.log(5) + Math.sqrt(3);
+		massiv[3]= 2*Math.tan(5) + 6*Math.PI + Math.sqrt(12);
+		var max = massiv[0];
+		var min = massiv[0];
+		for(var r = 1; r<4; r++){
+			if(max < massiv[r]) max = massiv[r];
+		    if(min > massiv[r]) min = massiv[r];
+		}
+		for (var i=0;i<4;i++){
+			if (massiv[i] == max) a=i;
+			if (massiv[i] == min) b=i;
+		}
+		document.write('Первый элемент массива: ' + massiv[0] + '</br>');
+		document.write('Второй элемент массива: ' + massiv[1] + '</br>');
+		document.write('Третий элемент массива: ' + massiv[2] + '</br>');
+		document.write('Четвертый элемент массива: ' + massiv[3] + '</br>');
+		document.write('Максимальный элемент: ' + max + '. Его индекс: ' + a +  '</br>');
+		document.write('Минимальный элемент: ' + min + '. Его индекс: ' + b +  '</br>');
+		document.write('</br>');
+	</script>
+</body>
+</html>

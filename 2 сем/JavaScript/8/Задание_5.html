@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+	img{
+		width: 480px;
+		height: 270px;
+	}
+</style>
+</head>
+<body>
+	<img id = "image" src="2.jpg">
+</body>
+<script type="text/javascript">
+	var t = document.getElementById("image");
+
+	t.onmouseover = function(){
+		t.style.width='50px';
+		t.style.height='20px';
+	}
+	t.onmouseout = function(){
+		t.style.width='480px';
+		t.style.height='270px';
+	}
+</script>
+</html>

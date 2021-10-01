@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="1.css"?>
+<poit>
+	<university>
+			<name>БГТУ</name>
+			<passing_grade>316</passing_grade>
+			<plan>150</plan>
+			<city>Минск</city>
+	</university>
+
+	<university>
+			<name>БГУ</name>
+			<passing_grade>360</passing_grade>
+			<plan>175</plan>
+			<city>Минск</city>
+	</university>
+
+	<university>
+			<name>БрГТУ</name>
+			<passing_grade>329</passing_grade>
+			<plan>55</plan>
+			<city>Брест</city>
+	</university>
+
+	<university>
+			<name>БНТУ</name>
+			<passing_grade>334</passing_grade>
+			<plan>30</plan>
+			<city>Минск</city>
+	</university>
+</poit>

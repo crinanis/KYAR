@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XML5</title>
+</head>
+<body>
+<input type="file" onchange="processFiles(this.files)">
+</body>
+<script>
+function processFiles(files) {
+let xml;
+var file = files[0];
+
+var reader = new FileReader();
+
+reader.onload = function (e) {
+	xml = e.target.result; 
+	parser = new DOMParser();
+	xmlDoc = parser.parseFromString(xml,"text/xml");
+	let choose = +prompt("Выберите от 1 до 3", 0);
+
+	studentsList = xmlDoc.getElementsByTagName("student");
+	document.write(studentsList[choose-1].childNodes[0].nodeValue);
+}
+
+reader.readAsText(file);
+}
+</script>
+</html>

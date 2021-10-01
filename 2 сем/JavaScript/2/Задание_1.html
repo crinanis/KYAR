@@ -1,0 +1,247 @@
+<html>
+<head>
+<script type='text/javascript'>
+	function func1(){
+		alert('Вас приветствует учебный центр');
+        x=prompt('Введите Ваше имя:', 'Имя');
+     	alert('Добро пожаловать на наши курсы, ' +x);
+    	result= confirm("Хотите стать WEB-дизайнером?");
+    	if (result){
+    		alert('Учите стили CSS и Javascript');
+    	} else {
+    		alert('Упускаете время!');
+    	}
+ 	}
+
+	function func2(){
+		alert('10 + 5 =')
+	    x=10+5;
+	    alert(x);
+
+	    alert('"10" + "5" =')
+	    x1="10" + "5";
+	    alert(x1);
+
+	    alert('22 + "5" =')
+	    x1= 22 + "5";
+	    alert(x1);
+
+	    alert('"22" + 5 =')
+	    x1="22" + 5;
+	    alert(x1);
+
+	    alert('Результатом сложения числа и строки всегда будет строка');
+	}
+
+	function func3(){
+		let x=30;
+    	let y=550;
+    	alert('x= ' + x);
+    	alert('y= ' + y);
+	
+        let resh1=(35*y-25*x)/5+232;
+        let resh2=(8*y/x-25*x/y-43)*6;
+
+        alert('Первое уравнение равно ' + resh1 + '. ' + 'Второе уравнение равно ' + resh2);
+        document.write('Первое уравнение равно  ' + resh1 + '. ');
+        document.write('Второе уравнение равно ' + resh2 + '. ');
+        document.write('Остаток от деления первого значения на второе: ' + resh1%resh2 + '.');
+	}
+
+	function func4(){
+		let x=prompt('Введите любое число');
+        if ((x<20 || x>40) && x!=15 && x%5==0){
+	     alert('Правильное значение');
+        } else {
+	     alert('Неправильное значение');
+        }
+	}
+
+	function func5(){
+		A=prompt('Введите число А');
+    	B=prompt('Введите число Б');
+    	if(A>B){
+    		alert('А больше Б');
+    	} else {
+     		alert('Б больше А');
+    	}
+    	result= confirm("Любите ли вы сериалы?");
+     	if (result){
+    		alert('Рекомендую вам посмотреть "Сверхъестественное"');
+    	} else {
+     		alert('Очень жаль');
+    	}
+	}
+
+	function func6(){
+		 var x=prompt('Введите сегодняшнее число');
+       switch(true){
+         case (x==1 || x==8 || x==15|| x==22):
+          alert('Это понедельник');
+          break;
+
+         case (x==2 || x==9 || x==16|| x==23):
+          alert('Это вторник');
+          break
+  
+         case (x==3 || x==10 || x==17|| x==24):
+          alert('Это среда');
+          break;
+        
+         case (x==4 || x==11 || x==18|| x==25):
+          alert('Это четверг');
+          break;        
+
+         case (x==5 || x==12 || x==19|| x==26):
+          alert('Это пятница');
+          break;
+          
+         case (x==6 || x==13 || x==20|| x==27):
+          alert('Это суббота');
+          break;
+
+         case (x==7 || x==14 || x==21|| x==28):
+          alert('Это воскресенье');
+          break;
+      }
+	}
+
+	function func7(){
+		try {
+        alert('Начало блока try');
+        tralala;
+        document.write("Здесь ошибок нет");
+        alert('Конец блока try');
+            } catch (e){
+             alert("В блоке try ошибка");
+                       }
+	}
+</script>
+<style>
+	div{
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin:15px;
+	}
+.b1{
+	height: 30px;
+	width: 120px;
+	font-weight: 700;
+	color:white;
+	border-radius: 3px;
+	background:#5ba1b0;
+	transition: 0.2s;
+}
+.b1:hover{
+	background:#b18f69;
+}
+.b1:active{
+	background:#d8caae;
+	box-shadow: 0 3px #acd1d1 inset;
+}
+
+.b2{
+	height: 30px;
+	width: 120px;
+	font-weight: 700;
+	color:#e2ded5;
+	border-radius: 20px;
+	background:#a8b2bd;
+	transition: 0.2s;
+}
+.b2:hover{
+	background:#92867b;
+}
+.b2:active{
+	background:#393532;
+}
+.b3{
+	height: 30px;
+	width: 120px;
+	font-weight: 700;
+	color:#ccb9b1;
+	border-radius: 0px;
+	background:#212123;
+	transition: 0.2s;
+}
+.b3:hover{
+	background:#c08267;
+}
+.b3:active{
+	background:#616063;
+}
+.b4{
+	height: 30px;
+	width: 120px;
+	font-weight: 700;
+	color:#eae9e4;
+	border-radius: 5px;
+	background:#e7acaa;
+	transition: 0.2s;
+}
+.b4:hover{
+	background:#9cb8a0;
+}
+.b4:active{
+	background:#e2b995;
+}
+.b5{
+	height: 30px;
+	width: 120px;
+	font-weight: 700;
+	color:#e8e6e5;
+	border-radius: 3px;
+	background:#b41531;
+	transition: 0.2s;
+}
+.b5:hover{
+	background:#65475b;
+}
+.b5:active{
+	background:#b67a54;
+}
+.b6{
+	height: 30px;
+	width: 120px;
+	font-weight: 700;
+	color:#e8e6e5;
+	border-radius: 50px;
+	background:#8d7777;
+	transition: 0.2s;
+}
+.b6:hover{
+	background:#db5e8d;
+}
+.b6:active{
+	background:#ab6fac;
+}
+.b7{
+	height: 30px;
+	width: 120px;
+	font-weight: 700;
+	color:#fceee0;
+	border-radius: 3px;
+	background:#a2c0cc;
+	transition: 0.2s;
+}
+.b7:hover{
+	background:#d6aa80;
+}
+.b7:active{
+	background:#5b899b;
+}
+</style>
+</head>
+<body>
+<div>
+<div><input class="b1" type='button' value='Задание №1' onclick='func1()' /></div>
+<div><input class="b2" type='button' value='Задание №2' onclick='func2()' /></div>
+<div><input class="b3" type='button' value='Задание №3' onclick='func3()' /></div>
+<div><input class="b4" type='button' value='Задание №4' onclick='func4()' /></div>
+<div><input class="b5" type='button' value='Задание №5' onclick='func5()' /></div>
+<div><input class="b6" type='button' value='Задание №6' onclick='func6()' /></div>
+<div><input class="b7" type='button' value='Задание №7' onclick='func7()' /></div>
+</div>
+</body>
+</html>

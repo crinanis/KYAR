@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Лабораторная №1</title>
+	<style type="text/css">
+		div {
+			display: flex;;
+			flex-direction: column;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	</style>
+	<script>
+		function getCoordinates() {
+			navigator.geolocation.getCurrentPosition(showCoordinates);
+		}
+		function showCoordinates(position) {
+			document.write("Широта: " + position.coords.latitude + "<br/>");
+			document.write("Долгота: " + position.coords.longitude); 
+		}
+
+		function painting(){
+			var canvas = document.getElementById("drawing");
+			var ctx=canvas.getContext('2d');
+			ctx.shadowOffsetx=3;
+			ctx.shadowOffsety=3;
+			ctx.shadowBlur=10;
+			ctx.shadowColor='black';
+
+			var grad = ctx.createLinearGradient(0,0,0,150);
+			grad.addColorStop(0.0,'black');
+			grad.addColorStop(1.0,'purple');				
+			ctx.fillStyle=grad;
+
+			ctx.fillRect(25,50,100,100); //основа домика
+			ctx.clearRect(45,70,60,60); //белый квадрат внутри синего
+			ctx.strokeRect(50,75,50,50)  //оконная рама
+			ctx.moveTo(25,50);
+			ctx.lineTo(125,50); //крыша
+			ctx.lineTo(75,10); //крыша
+			ctx.fill(); //заполнение крыши цветом
+
+			ctx.font="15px Verdana";
+			ctx.fillStyle='black';
+			ctx.fillText("Буданова Ксения", 1, 170);
+		}
+</script>
+
+</head>
+<body>
+	<h1 align="center">Я,<mark>Буданова Ксения</mark>, изучаю HTML5</h1>
+	<div><video src="turtle.mp4" width="450" height="350" controls="controls"></video></div>
+	<div><audio src="wind.mp3" controls="controls"> </audio></div>
+	<div>Для считывания координат нажмите на кнопку: </div>
+    <input type="button" value=" Координаты" onclick = "getCoordinates()">
+    <div></div>
+	<input type="button" value="Кликни, чтобы нарисовать" onclick = "painting()">
+	 <canvas id="drawing" width="500" height="200"></canvas>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        img{
+            padding-top: 400px;
+        }
+    </style>
+     <title>JQUERY</title>
+	 <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+	 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <img src="3.jpg" width="200" height="200" />
+    
+	<script>
+         $("img").click(function(){
+            for(var i = 0; i < 3; i++){
+                $(this).animate({"margin-left":'+=210px', "margin-top":'-=320px'},160);
+                $(this).animate({"margin-left":'+=210px', "margin-top":'+=330px'},80);
+            }
+        });
+    </script>
+</body>
+</html>

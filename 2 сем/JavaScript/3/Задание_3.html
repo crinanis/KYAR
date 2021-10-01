@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+	var my_str= 'Буданова Ксения Андреевна';
+	var str_upper = my_str.toUpperCase();
+	var str_lower = my_str.toLowerCase();
+	var conc_str =  str_upper.concat(str_lower);
+	var rep_str = my_str.replace(my_str, 'Б.К.А');
+	document.write('Исходная строка: ' + my_str + '</br>');
+	document.write('Строка в верхнем регистре: ' + str_upper + '</br>');
+	document.write('Строка в нижнем регистре: ' + str_lower + '</br>');
+	document.write('Длина строки: ' + (my_str.length) + '</br>');
+	document.write('Объединённые строки ' + conc_str + '</br>');
+    document.write('Строка с заменённым элементом: ' + rep_str);
+	</script>
+</body>
+</html>
