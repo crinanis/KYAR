@@ -1,0 +1,92 @@
+h1, h2{
+ font-family: Trebuchet MS;
+ font-size: 25px;
+ font-style: italic; 
+}
+h3{
+font-family: Monotype Corsiva;
+ font-size: 18px;
+ font-style: italic;
+}
+span{
+font-family: Gabriola;
+ font-size: 27px;
+ font-style: bold;
+}
+
+table{
+font-family: Luicida Sans Unicode;
+font-size: 17px;
+text-align: center;
+border-collapse:separate;
+border-spacing: 4px;
+border: 4px dotted #846d63;
+border-radius: 20px;
+padding: 20px;
+width: 75em;
+
+}
+th, td{
+border: 1px solid #846d63;
+border-radius: 20px;
+}
+  a:link{
+        color:#6a4162;
+      }
+      a:hover{
+        color: #c65e6a;
+      }
+      a:active{
+        color:#C20AF0;
+      }
+
+      p:first-child{
+        color:#73472e;
+      }
+      p:first-letter{
+        border: 1px solid red;
+        font-size:30px;
+      }
+      p:first-line{
+        border-bottom: 1px solid purple;
+      }
+
+      .spisok{
+        list-style-type: none;
+        list-style-image: url(paw.png);
+        font-family: Impact;
+        font-size: 17px;
+      }
+      .spisok1{
+        font-family: YU Gothic UI;
+        font-size: 15px;
+      }
+      .spisok2{
+        font-family: Sylfaen;
+        font-size: 18px;
+      }
+      .disc{
+        list-style-type: none;
+        list-style-image: url(kot.png);
+        font-family: Monotype Corsiva;
+        font-size: 21px;
+        color: #89564a;
+      }
+       .square {
+         list-style-type: square;
+         font-family: Calibri;
+         color:#6a4162;
+       }
+       .circle{
+        list-style-position: inside;
+        list-style-type: circle;
+        font-family: Comic sans MS;
+        font-size: 15px;
+        color: #c4486b;
+       }
+       .colorh{
+        color: #e4bcbc;
+       }
+       #color{
+        color: #51382a;
+       }

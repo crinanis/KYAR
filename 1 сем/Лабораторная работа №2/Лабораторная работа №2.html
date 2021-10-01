@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Моя первая страница</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+      .spisok{
+        list-style-type: none;
+        list-style-image: url(paw.png);
+        font-family: Impact;
+        font-size: 17px;
+      }
+      .spisok1{
+        font-family: YU Gothic UI;
+        font-size: 15px;
+      }
+      .spisok2{
+        font-family: Sylfaen;
+        font-size: 18px;
+      }
+      .disc{
+        list-style-type: none;
+        list-style-image: url(kot.png);
+        font-family: Monotype Corsiva;
+        font-size: 21px;
+        color: #89564a;
+      }
+       .square {
+         list-style-type: square;
+         font-family: Calibri;
+         color:#6a4162;
+       }
+       .circle{
+        list-style-position: inside;
+        list-style-type: circle;
+        font-family: Comic sans MS;
+        font-size: 15px;
+        color: #c4486b;
+       }
+       .colorh{
+        color: #e4bcbc;
+       }
+       #color{
+        color: #51382a;
+       }
+       .p1{
+        font-family:Arial;
+        font-size:3;
+        color:#73472e;
+        text-align: justify;
+        letter-spacing: 3pt;
+       }
+       .p2{
+        font-family:Helvetica;
+        font-size:2;
+        color:rgb(173, 153, 134);
+        text-align: right;
+        letter-spacing: 1pt;
+       }
+       .p3{
+        font-family:Segoe UI Light;
+        font-size:4;
+        color:chocolate;
+        text-align: center;
+        word-spacing: 10pt;
+       }
+    </style>
+      <link href="styles.css" rel="stylesheet">
+	</head>
+	<body bgcolor="#e7d6c6" link="#b4856e" vlink="#b4856e">
+		<h1 align="center">Я, <a href="Приложение.html">Буданова Ксения Андреевна</a>, изучаю <span class="colorh">HTML</span> и CSS.</h1>
+		<h2>Виды кофе: </h2>
+		<h3>Капучино</h3>
+    <p class="p1">Кофейный напиток на основе эспрессо с добавлением в него подогретого вспененного молока. Толстый слой густой кремовой пенки вместе со <span class="color">сладковатым</span> согревающим молоком и богатым вкусом хорошо сваренного эспрессо – это абсолютное наслаждение…</p>
+
+		<h3>Флэт-Уайт</h3>
+		<p class="p2">Flat white, «плоский белый» — кофейный напиток готовится путём добавления нагретого паром молока с небольшим количеством пены в <span id="color">двойную</span> порцию эспрессо. Флэт Уайт придуман в 1980-х годах и до сих пор продолжается спор о том, где же придуман Флэт Уайт – в Австралии или Новой Зеландии, но несомненно, где-то там! Обжарщиком и бариста в результате экспериментов над выявлением баланса вкуса кофе и молока. Бариста отказался от большого количества пены в напитке, уменьшил пропорции молока (110 мл) и увеличил количество кофе (60 мл).</p>
+
+		<h3>Латте</h3>
+		<p class="p3">Этот напиток придумали не в Италии. Когда эспрессо распробовали по всему миру, он был горьким, насыщенным, для многих абсолютно новое ощущение. Некоторым не нравилась эта горечь, и они добавляли молоко, чтобы сделать напиток нежнее. Для таких потребителей и придумали кофе Латте. Обычно в кофе латте для смягчения вкуса добавляют <span id="color">больше</span> молока, чем в капучино, но меньше крема. Многие знают, что заказав в Италии латте, можно попасть в неловкое положение, ведь вам принесут стакан… обычного молока.</p>
+
+		<h2>Характеристики кофе</h2>
+		<ol>
+          <li class="spisok">По виду деревьев:
+            <ul class="disc">
+            	<li>Арабика</li>
+            	<li>Робуста</li>
+            	<li>Либерика</li>
+            	<li>Эксцельза</li>
+            </ul>   
+          </li>
+          <li class="spisok1"> По способу приготовления:
+            <ul class="square">
+            	<li>По-турецки</li>
+            	<li>Фильтровый</li>
+              <li>Капсульный</li>
+            	<li>Сваренный в френч-прессе</li>
+              <li>Сваренный в гейзерной кофеварке</li>
+            </ul>
+          </li>
+          <li class="spisok2"> Виды кофейных напитков
+          	<ul class="circle">
+            	<li>Эспрессо</li>
+            	<li>Латте</li>
+            	<li>Гляссе</li>
+              <li>Ристретто</li>
+              <li>Лунго</li>
+              <li>Американо</li>
+              <li>Капучино</li>
+            </ul>
+          </li>
+        </ol>
+        <h2>Результаты сессии</h2>
+        <table border="1" cellpadding="5" width="100%">
+        <tr><th>ФИО</th><th colspan="3"><a href="Приложение.html">Буданова Ксения Андреевна</a></th></tr>
+        <tr><th>Своё фото<p><img src="homa.jpg" width="170" height="150"></p></th><th colspan="3">Адрес: ул.Белорусская д. 21, 702А</th></tr>
+        <tr><th rowspan="6">1 семестр 2020/2021 уч. года</th><th>Дата</th><th>Предмет</th><th>Оценка</th></tr>
+        <tr><th>31.12</th><th>Физика</th><th>8</th></tr>
+        <tr><th>02.01</th><th>ОАИП</th><th>7</th></tr>
+        <tr><th>04.01</th><th>ОИТ</th><th>9</th></tr>
+        <tr><th>07.01</th><th>Математика</th><th>8</th></tr>
+        <tr><th>11.01</th><th>АЛОЦВМ</th><th>8</th></tr>
+       </table>
+	</body>
+</html>

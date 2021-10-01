@@ -1,0 +1,32 @@
+h1, h2{
+ font-family: Trebuchet MS;
+ font-size: 25px;
+ font-style: italic; 
+}
+h3{
+font-family: Monotype Corsiva;
+ font-size: 18px;
+ font-style: italic;
+}
+span{
+font-family: Gabriola;
+ font-size: 27px;
+ font-style: bold;
+}
+
+table{
+font-family: Luicida Sans Unicode;
+font-size: 17px;
+text-align: center;
+border-collapse:separate;
+border-spacing: 4px;
+border: 4px dotted #846d63;
+border-radius: 20px;
+padding: 20px;
+width: 75em;
+
+}
+th, td{
+border: 1px solid #846d63;
+border-radius: 20px;
+}
